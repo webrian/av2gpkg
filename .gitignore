@@ -1,5 +1,6 @@
-*.gpkg
+*.gpkg*
 model_output.log
 *.qgs~
+*.pdf*
 AV_Grundlage_GPKG.qg*
 Make_Gebaeude.model3
