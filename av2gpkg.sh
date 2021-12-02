@@ -2,11 +2,11 @@
 
 
 # Input OGR virtual format file, see OGR documentation
-input_itf=0942.itf
-input_vrt=DM01AVCH24LV95D.vrt
+input_itf=av.itf
+input_vrt=av.vrt
 
 # Output GeoPackage
-output_gpkg=0942.gpkg
+output_gpkg=av.gpkg
 
 rm -rf ${output_gpkg}*
 
