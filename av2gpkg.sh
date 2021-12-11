@@ -27,3 +27,6 @@ qgis_process run ./Boundary2Area.model3 -- Centroids="${output_gpkg}|layername=B
 /usr/bin/ogr2ogr -f GPKG -append ${output_gpkg} ${input_vrt} Einzelobjekte_Punktelement
 /usr/bin/ogr2ogr -f GPKG -append -nlt COMPOUNDCURVE ${output_gpkg} ${input_vrt} Einzelobjekte_Linienelement
 ./Flaechenelement2Area.py ${input_itf} Einzelobjekte__Flaechenelement ${output_gpkg} Einzelobjekte_Flaechenelement_Area
+
+# Topic Nomenklatur
+/usr/bin/ogr2ogr -f GPKG -append ${output_gpkg} ${input_vrt} Nomenklatur_FlurnamePos
