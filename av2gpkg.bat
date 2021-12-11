@@ -28,3 +28,6 @@ ogr2ogr -f GPKG -append %output_gpkg% %input_vrt% Einzelobjekte_Einzelobjekt
 ogr2ogr -f GPKG -append %output_gpkg% %input_vrt% Einzelobjekte_Punktelement
 ogr2ogr -f GPKG -append -nlt COMPOUNDCURVE %output_gpkg% %input_vrt% Einzelobjekte_Linienelement
 python3 Flaechenelement2Area.py %input_itf% Einzelobjekte__Flaechenelement %output_gpkg% Einzelobjekte_Flaechenelement_Area
+
+REM Topic Nomenklatur
+ogr2ogr -f GPKG -append %output_gpkg% %input_vrt% Nomenklatur_FlurnamePos

@@ -101,4 +101,21 @@
         <Field name="Qualitaet" src="Field03"/>
         <Field name="Art" src="Field04"/>
     </OGRVRTLayer>
+    <OGRVRTLayer name="Nomenklatur_FlurnamePos">
+        <SrcDataSource relativeToVrt="1">av.itf</SrcDataSource>
+        <SrcSql>SELECT * FROM Nomenklatur__FlurnamePos LEFT JOIN Nomenklatur__Flurname ON Nomenklatur__Flurname.Field01 = Nomenklatur__FlurnamePos.Field02</SrcSql>
+        <GeometryType>wkbPoint</GeometryType>
+        <LayerSRS>EPSG:2056</LayerSRS>
+        <GeometryField encoding="PointFromColumns" x="Field03" y="Field04"/>
+        <Field name="OBJID" src="Field01"/>
+        <Field name="FlurnamePos_von" src="Field02"/>
+        <Field name="Entstehung" src="Nomenklatur__Flurname.Field02"/>
+        <Field name="Ori" src="Field05"/>
+        <Field name="HAli" src="Field06"/>
+        <Field name="VAli" src="Field07"/>
+        <Field name="Groesse" src="Field08"/>
+        <Field name="Stil" src="Field09"/>
+        <!--Field name="OBJID" src="Nomenklatur__Flurname.Field01"/-->
+        <Field name="Name" src="Nomenklatur__Flurname.Field03"/>
+    </OGRVRTLayer>
 </OGRVRTDataSource>
