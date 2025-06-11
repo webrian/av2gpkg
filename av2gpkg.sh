@@ -30,3 +30,6 @@ qgis_process run ./Boundary2Area.model3 -- Centroids="${output_gpkg}|layername=B
 
 # Topic Nomenklatur
 /usr/bin/ogr2ogr -f GPKG -append ${output_gpkg} ${input_vrt} Nomenklatur_FlurnamePos
+
+# Topic Strassenstuecke
+/usr/bin/ogr2ogr -f GPKG -append -nlt COMPOUNDCURVE ${output_gpkg} ${input_vrt} Gebaeudeadressen_Strassenstueck
