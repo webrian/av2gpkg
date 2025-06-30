@@ -120,10 +120,14 @@
     </OGRVRTLayer>
     <OGRVRTLayer name="Gebaeudeadressen_Strassenstueck">
         <SrcDataSource relativeToVrt="1">av.itf</SrcDataSource>
-        <SrcLayer>Gebaeudeadressen__Strassenstueck</SrcLayer>
+        <SrcSql>SELECT * FROM Gebaeudeadressen__Strassenstueck LEFT JOIN Gebaeudeadressen__LokalisationsName ON Gebaeudeadressen__LokalisationsName.Field02 = Gebaeudeadressen__Strassenstueck.Field02</SrcSql>
+        <!--SrcLayer>Gebaeudeadressen__Strassenstueck</SrcLayer-->
         <GeometryType>wkbCompoundCurve</GeometryType>
         <LayerSRS>EPSG:2056</LayerSRS>
         <Field name="OBJID" src="Field01"/>
+        <Field name="Strassenstueck_von" src="Field02"/>
+        <Field name="Ordnung" src="Field05"/>
         <Field name="IstAchse" src="Field06"/>
+        <Field name="Name" src="Gebaeudeadressen__LokalisationsName.Field03"/>
     </OGRVRTLayer>
 </OGRVRTDataSource>
