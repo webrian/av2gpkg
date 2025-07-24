@@ -118,6 +118,13 @@
         <!--Field name="OBJID" src="Nomenklatur__Flurname.Field01"/-->
         <Field name="Name" src="Nomenklatur__Flurname.Field03"/>
     </OGRVRTLayer>
+    <OGRVRTLayer name="Gemeindegrenzen_Gemeindegrenze_Geometrie">
+        <SrcDataSource relativeToVrt="1">av.itf</SrcDataSource>
+        <SrcLayer>Gemeindegrenzen__Gemeindegrenze_Geometrie</SrcLayer>
+        <GeometryType>wkbCompoundCurve</GeometryType>
+        <LayerSRS>EPSG:2056</LayerSRS>
+        <Field name="OBJID" src="Field01"/>
+    </OGRVRTLayer>
     <OGRVRTLayer name="Gebaeudeadressen_Strassenstueck">
         <SrcDataSource relativeToVrt="1">av.itf</SrcDataSource>
         <SrcSql>SELECT * FROM Gebaeudeadressen__Strassenstueck LEFT JOIN Gebaeudeadressen__LokalisationsName ON Gebaeudeadressen__LokalisationsName.Field02 = Gebaeudeadressen__Strassenstueck.Field02</SrcSql>
