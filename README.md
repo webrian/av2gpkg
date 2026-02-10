@@ -4,3 +4,9 @@
 - Additional QML styles:
   - to highlight vertices and curve points
   - to show the Cadastral Surveying data according to the instruction "Darstellung des Planes für das Grundbuch"
+
+## Usage
+
+```
+./av2gpkg.sh your_av_file.itf
+```

@@ -1,5 +1,10 @@
 #!/bin/sh
 
+# Suppress the warnings
+export CPL_LOG=/dev/null
+
+# Copy input INTERLIS file
+cp $1 av.itf
 
 # Input OGR virtual format file, see OGR documentation
 input_itf=av.itf
@@ -36,3 +41,5 @@ qgis_process run ./Boundary2Area.model3 -- Centroids="${output_gpkg}|layername=B
 
 # Topic Strassenstuecke
 /usr/bin/ogr2ogr -f GPKG -append -nlt COMPOUNDCURVE ${output_gpkg} ${input_vrt} Gebaeudeadressen_Strassenstueck
+
+rm -rf av.itf

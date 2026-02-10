@@ -4,3 +4,4 @@ model_output.log
 *.pdf*
 AV_Grundlage_GPKG.qg*
 Make_Gebaeude.model3
+*.itf
